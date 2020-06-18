@@ -288,6 +288,7 @@ class TimedTextEditor extends PureComponent {
     editable: true,
     props: {
       ...this.props,
+      setEditorNewContentStateSpeakersUpdate: this.setEditorNewContentStateSpeakersUpdate,
       editorState: this.state.editorState,
     }
   });
