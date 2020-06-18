@@ -1,5 +1,7 @@
 # React Transcript Editor
 
+This a fork of [`@bbc/react-transcript-editor`](https://github.com/bbc/react-transcript-editor). You probably want the original library.
+
 <!-- _One liner_ -->
 
 A React component to make transcribing audio and video easier and faster.

@@ -1,5 +1,5 @@
 {
-  "name": "@bbc/react-transcript-editor",
+  "name": "@kablamo/react-transcript-editor",
   "description": "A React component to make transcribing audio and video easier and faster.",
   "version": "1.4.0",
   "keywords": [
@@ -120,12 +120,12 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bbc/react-transcript-editor/issues"
+    "url": "https://github.com/KablamoOSS/react-transcript-editor/issues"
   },
-  "homepage": "https://github.com/bbc/react-transcript-editor",
+  "homepage": "https://github.com/KablamoOSS/react-transcript-editor",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbc/react-transcript-editor.git"
+    "url": "git+https://github.com/KablamoOSS/react-transcript-editor.git"
   },
   "browserslist": [
     ">0.2%",
