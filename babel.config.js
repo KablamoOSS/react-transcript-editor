@@ -9,14 +9,14 @@ module.exports = {
       }
     ],
     '@babel/preset-react',
-    [
-      'minify',
-      {
-        builtIns: false,
-        evaluate: false,
-        mangle: false
-      }
-    ]
+    // [
+    //   'minify',
+    //   {
+    //     builtIns: false,
+    //     evaluate: false,
+    //     mangle: false
+    //   }
+    // ]
   ],
   plugins: [
     '@babel/plugin-proposal-object-rest-spread',
