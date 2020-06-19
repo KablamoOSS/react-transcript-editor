@@ -2,6 +2,7 @@
 // and http://jasonwatmore.com/post/2018/04/14/react-npm-how-to-publish-a-react-component-to-npm
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpackNodeExternals = require('webpack-node-externals');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -31,7 +32,7 @@ module.exports = {
     libraryTarget: 'commonjs2'
   },
   optimization: {
-    minimize: true
+    minimize: false,
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -73,8 +74,6 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         include: path.resolve(__dirname, 'packages'),
-        // TODO: because it uses entry point to determine graph of dependencies, might not be needed to exclude test ans sample files?
-        exclude: /(node_modules|bower_components|build|dist|demo|.storybook)/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -84,25 +83,8 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    alias: {
-      'react': path.resolve(__dirname, './node_modules/react'),
-      'react-dom': path.resolve(__dirname, './node_modules/react-dom')
-    }
-  },
-  externals: {
-    // Don't bundle react or react-dom
-    react: {
-      commonjs: 'react',
-      commonjs2: 'react',
-      amd: 'React',
-      root: 'React'
-    },
-    'react-dom': {
-      commonjs: 'react-dom',
-      commonjs2: 'react-dom',
-      amd: 'ReactDOM',
-      root: 'ReactDOM'
-    }
-  }
+  resolve: {},
+  externals: [
+    webpackNodeExternals(),
+  ],
 };
