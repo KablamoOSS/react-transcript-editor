@@ -16,6 +16,7 @@ import {
   getWordCount,
   getCurrentWord,
   splitParagraph,
+  updateTimestampsForEditorState,
 } from './util';
 
 import {
