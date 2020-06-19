@@ -1,7 +1,7 @@
 {
   "name": "@kablamo/react-transcript-editor",
   "description": "A React component to make transcribing audio and video easier and faster.",
-  "version": "1.5.0-alpha.1",
+  "version": "1.5.0-alpha.2",
   "keywords": [
     "transcript",
     "transcriptions",
